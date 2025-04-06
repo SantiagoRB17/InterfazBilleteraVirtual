@@ -1,0 +1,32 @@
+.root{
+    -fx-background-color: #123458;
+}
+.label{
+    -fx-text-fill: #F1EFEC;
+    -fx-font-weight: bold;
+    -fx-font-size: 50px;
+}
+#btn_iniciarSesion{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 10px;
+}
+#btn_iniciarSesion:hover{
+    -fx-background-color: #F16767;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#btn_registrarse{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 10px;
+}
+#btn_registrarse:hover{
+    -fx-background-color: #F16767;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

@@ -1,0 +1,36 @@
+.root{
+    -fx-background-color: #123458;
+}
+.label{
+    -fx-text-fill: #F1EFEC;
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+#gridPane_formularioTransferencia .label{
+    -fx-text-fill: #F1EFEC;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.text-field{
+    -fx-background-color: #a7a9be;
+    -fx-text-fill: #0f0e17;
+    -fx-font-weight: bold;
+}
+#btn_transferir{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 50px;
+}
+#btn_transferir:hover{
+    -fx-background-color: #F16767;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#cmb_categorias{
+    -fx-background-color: #a7a9be;
+}
+#cmb_categorias .list-view{
+    -fx-background-color: #a7a9be;
+}

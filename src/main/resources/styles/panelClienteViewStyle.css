@@ -1,0 +1,80 @@
+.root{
+    -fx-background-color: #123458;
+}
+.label{
+    -fx-text-fill: #F1EFEC;
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+}
+#lb_saludo{
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+}
+#lb_nroCuenta{
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+}
+#tb_tablaTransferencias{
+    -fx-background-color: #0e172c;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+#cl_tipo {
+    -fx-background-color: #FFB200;
+
+}
+#cl_tipo .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f0e17;
+}
+#cl_fecha{
+    -fx-background-color: #EB5B00;
+}
+#cl_fecha .label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f0e17;
+}
+#cl_valor{
+    -fx-background-color: #D91656;
+}
+#cl_valor .label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f0e17;
+}
+#cl_usuario{
+    -fx-background-color: #640D5F;
+}
+#cl_usuario .label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f0e17;
+}
+#cl_categoria{
+    -fx-background-color: #F16767;
+}
+#cl_categoria .label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #0f0e17;
+}
+#menBtn_accionesPanel{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+    -fx-font-weight: bold;
+    -fx-font-size: 10px;
+    -fx-border-radius: 50px;
+}
+#menBtn_accionesPanel .label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #F1EFEC;
+}
+#menBtn_accionesPanel .menu-item{
+    -fx-background-color: #ff8906;
+    -fx-font-size: 10px;
+}
+#menBtn_accionesPanel .menu-item:hover{
+    -fx-background-color: #F16767;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+#menBtn_accionesPanel .context-menu{
+    -fx-background-color: #EB5B00;
+}

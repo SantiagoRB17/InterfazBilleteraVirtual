@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/inicioViewStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfazbilleteravirtual.controladores.InicioViewController">
+   <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30px" HBox.hgrow="ALWAYS">
+      <Label text="Bienvenido" HBox.hgrow="ALWAYS" />
+      <HBox alignment="CENTER" spacing="10">
+         <Button fx:id="btn_iniciarSesion" maxWidth="Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#irAIniciarSesion" text="Iniciar Sesion" HBox.hgrow="ALWAYS" />
+         <Button fx:id="btn_registrarse" maxWidth="Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#irARegistrarse" text="Registrarse" HBox.hgrow="ALWAYS" />
+      </HBox>
+   </VBox>
+   <VBox>
+      <ImageView fx:id="img_imagenInicio" fitHeight="401.0" fitWidth="247.0">
+      </ImageView>
+   </VBox>
+</HBox>
