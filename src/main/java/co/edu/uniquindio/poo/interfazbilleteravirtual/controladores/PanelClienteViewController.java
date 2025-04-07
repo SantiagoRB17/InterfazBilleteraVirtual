@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.interfazbilleteravirtual.controladores;
 
+import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.entidades.Banco;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +14,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PanelClienteViewController implements Initializable{
+
+    private final Banco banco = Banco.getInstancia();
 
     @FXML
     private TableColumn<?, ?> cl_categoria;

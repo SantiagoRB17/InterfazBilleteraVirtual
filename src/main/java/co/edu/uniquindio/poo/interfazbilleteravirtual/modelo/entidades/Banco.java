@@ -19,8 +19,16 @@ public class Banco {
 
     private List<Usuario> usuarios;
     private List<Billetera> billeteras;
+    public static Banco INSTANCIA;
 
-    public Banco(){
+    public static Banco getInstancia(){
+        if(INSTANCIA == null){
+            INSTANCIA = new Banco();
+        }
+        return INSTANCIA;
+    }
+
+    private Banco(){
         this.usuarios = new ArrayList<>();
         this.billeteras = new ArrayList<>();
     }
