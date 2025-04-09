@@ -5,7 +5,9 @@ import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.enums.Categoria;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.vo.PorcentajeGastosIngresos;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.vo.SaldoTransaccionesBilletera;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.validaciones.ValidacionCorreo;
+import javafx.scene.image.Image;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -255,8 +257,27 @@ public class Banco {
         return billetera.obtenerPorcentajeGastosIngresos(mes, anio);
     }
 
+    public void editarUsuario(String id,String nombre, String direccion,String  email, String password ) throws Exception {
+        Usuario usuario = buscarUsuario(id,password);
 
+        if(usuario == null) {
+            throw new Exception("No existe el usuario con el ID especificado");
+        }
 
+        // Validaciones
+        if(nombre.isEmpty()  || email.isEmpty() || password.isEmpty()) {
+            throw new Exception("Todos los campos son obligatorios");
+        }
+
+        if(!ValidacionCorreo.validarExpresionRegular(email)) {
+            throw new Exception("Email inválido");
+        }
+        // Actualizar el Usuario
+        usuario.setNombre(nombre);
+        usuario.setDireccion(direccion);
+        usuario.setEmail(email);
+        usuario.setPassword(password);
+    }
     public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }

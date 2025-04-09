@@ -2,6 +2,7 @@ module co.edu.uniquindio.poo.interfazbilleteravirtual {
     requires javafx.controls;
     requires javafx.fxml;
     requires static lombok;
+    requires javafx.graphics;
 
     opens co.edu.uniquindio.poo.interfazbilleteravirtual.app to javafx.fxml;
     opens co.edu.uniquindio.poo.interfazbilleteravirtual.controladores to javafx.fxml;

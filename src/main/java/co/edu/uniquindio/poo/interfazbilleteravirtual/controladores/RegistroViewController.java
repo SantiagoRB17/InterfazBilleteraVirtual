@@ -67,6 +67,5 @@ public class RegistroViewController{
             bancoApp.crearAlerta(e.getMessage(), Alert.AlertType.ERROR);
         }
     }
-
 }
 

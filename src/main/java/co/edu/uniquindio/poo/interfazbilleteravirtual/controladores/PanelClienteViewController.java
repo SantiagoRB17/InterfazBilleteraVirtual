@@ -112,8 +112,6 @@ public class PanelClienteViewController implements Initializable{
     public void irAtransferencia(ActionEvent event) throws Exception {
         abrirTransferencia();
     }
-    public void editarPerfil(ActionEvent actionEvent) {
-    }
 
     /**
      * Metodo para abrir la ventana para transferencias
@@ -140,6 +138,15 @@ public class PanelClienteViewController implements Initializable{
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    /**
+     *
+     * @param actionEvent
+     * @throws Exception
+     */
+    public void editarPerfil(ActionEvent actionEvent) throws Exception {
+            bancoApp.navegarVentanas("/EditarPerfil.fxml","Banco-EditarPerfil",false);
     }
 }
 
