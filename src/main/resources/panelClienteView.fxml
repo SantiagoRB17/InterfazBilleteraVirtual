@@ -9,23 +9,25 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" spacing="30.0" style="-fx-padding: 20.0" stylesheets="@styles/panelClienteViewStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfazbilleteravirtual.controladores.PanelClienteViewController">
+<?import javafx.scene.layout.Region?>
+<VBox maxWidth="Infinity" minWidth="-Infinity" minHeight="-Infinity" maxHeight="Infinity" spacing="30.0" style="-fx-padding: 20.0" stylesheets="@styles/panelClienteViewStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfazbilleteravirtual.controladores.PanelClienteViewController">
     <HBox spacing="30.0" VBox.vgrow="ALWAYS">
        <Label maxWidth="Infinity" minWidth="-Infinity" text="Panel principal de administración" HBox.hgrow="ALWAYS" />
       <MenuButton fx:id="menBtnAccionesPanel" alignment="CENTER" maxWidth="Infinity" minWidth="-Infinity" mnemonicParsing="false" text="¿Que desea hacer?" HBox.hgrow="ALWAYS">
         <items>
-          <MenuItem fx:id="menItemCerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
           <MenuItem fx:id="menItemConsultar" mnemonicParsing="false" onAction="#consultarSaldo" text="Consultar" />
             <MenuItem fx:id="menItemTransferir" mnemonicParsing="false" onAction="#irAtransferencia" text="Transferir" />
+            <MenuItem fx:id="menitemEditarPerfil" mnemonicParsing="false" onAction="#editarPerfil" text="Editar Perfil" />
+          <MenuItem fx:id="menItemCerrarSesion" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
         </items>
       </MenuButton>
     </HBox>
     <HBox spacing="20.0">
         <Label fx:id="lbSaludo" text="Label" HBox.hgrow="ALWAYS" />
-      <Pane HBox.hgrow="ALWAYS" />
+        <Region HBox.hgrow="ALWAYS"/>
         <Label fx:id="lbNroCuenta" text="Label" HBox.hgrow="ALWAYS" />
     </HBox>
-    <TableView fx:id="tb_tablaTransferencias" VBox.vgrow="ALWAYS">
+    <TableView fx:id="tbTablaTransferencias" VBox.vgrow="ALWAYS">
       <columns>
           <TableColumn fx:id="clTipo" text="Tipo" />
           <TableColumn fx:id="clFecha" text="Fecha" />

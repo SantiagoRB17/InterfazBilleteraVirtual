@@ -255,6 +255,8 @@ public class Banco {
         return billetera.obtenerPorcentajeGastosIngresos(mes, anio);
     }
 
+
+
     public void setUsuarios(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }

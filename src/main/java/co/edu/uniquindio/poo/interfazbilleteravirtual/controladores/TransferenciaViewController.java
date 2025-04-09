@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.interfazbilleteravirtual.controladores;
 
+import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.enums.Categoria;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,7 +19,7 @@ public class TransferenciaViewController implements Initializable {
     private Button btnTransferir;
 
     @FXML
-    private ComboBox<?> cmbCategorias;
+    private ComboBox<Categoria> cmbCategorias;
 
     @FXML
     private TextField txtMontoATransferir;
@@ -32,7 +33,7 @@ public class TransferenciaViewController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-
+        cmbCategorias.getItems().addAll(Categoria.values());
     }
 
 }
