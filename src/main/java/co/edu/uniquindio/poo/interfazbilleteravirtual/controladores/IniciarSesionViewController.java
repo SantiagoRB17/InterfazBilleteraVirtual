@@ -14,15 +14,15 @@ import java.util.ResourceBundle;
 
 public class IniciarSesionViewController implements Initializable {
     @FXML
-    private GridPane gridPane_formularioIniciarSesion;
+    private GridPane gridPaneFormularioIniciarSesion;
     @FXML
-    private Button btn_iniciarSesion;
+    private Button btnIniciarSesion;
 
     @FXML
-    private PasswordField passField_contrasenaInicioSesion;
+    private PasswordField passFieldContrasenaInicioSesion;
 
     @FXML
-    private TextField txt_numeroIdentificacionInicioSesion;
+    private TextField txtNumeroIdentificacionInicioSesion;
 
     @FXML
     void iniciarSesion(ActionEvent event) {
@@ -33,8 +33,13 @@ public class IniciarSesionViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle){
 
     }
+    /**
+     * Metodo controlador para el boton volver al inicio
+     * @param event
+     * @throws Exception
+     */
     public void volverAInicio(ActionEvent event) throws Exception {
-        bancoApp.abrirInicio();
+        bancoApp.navegarVentanas("/InicioView.fxml","Banco-IniciarSesion",false);
     }
 }
 

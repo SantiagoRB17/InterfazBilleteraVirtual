@@ -27,37 +27,19 @@ public class BancoApp extends Application {
     public void start(Stage primary) throws Exception{
         this.primary = primary;
         this.primary.setTitle("Billtera Virtual");
-        abrirInicio();
+        navegarVentanas("/InicioView.fxml","Banco",false);
     }
 
-    public void abrirInicio() throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/InicioView.fxml"));
+    public void navegarVentanas(String nombreArchivoFxml, String tituloVentana, Boolean resize) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(nombreArchivoFxml));
+
         Parent parent = loader.load();
-
-        Scene inicio = new Scene(parent);
-        primary.resizableProperty().setValue(Boolean.FALSE);
-        primary.setScene(inicio);
-        primary.show();
-    }
-
-    public void abrirIniciarSesion() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/IniciarSesionView.fxml"));
-        Parent parent=loader.load();
-
         Scene inicioSesion = new Scene(parent);
-        primary.resizableProperty().setValue(Boolean.FALSE);
+        primary.resizableProperty().setValue(resize);
         primary.setScene(inicioSesion);
         primary.show();
     }
-    public void abrirRegistro()throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/RegistroView.fxml"));
-        Parent parent = loader.load();
 
-        Scene registro = new Scene(parent);
-        primary.resizableProperty().setValue(Boolean.FALSE);
-        primary.setScene(registro);
-        primary.show();
-    }
 
     public static void main(String[] args) {
         launch(BancoApp.class,args);

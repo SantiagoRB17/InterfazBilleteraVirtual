@@ -15,28 +15,38 @@ import java.util.ResourceBundle;
 public class InicioViewController implements Initializable {
 
     @FXML
-    private Button btn_iniciarSesion;
+    private Button btnIniciarSesion;
 
     @FXML
-    private Button btn_registrarse;
+    private Button btnRegistrarse;
 
     @FXML
-    private ImageView img_imagenInicio;
+    private ImageView imgImagenInicio;
 
     private final BancoApp bancoApp = BancoApp.getInstancia();
-    public InicioViewController() {
-    }
+
     Image imagen = new Image(getClass().getResource("/fondoInicio.jpg").toExternalForm());
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        img_imagenInicio.setImage(imagen);
+        imgImagenInicio.setImage(imagen);
     }
 
+    /**
+     * Metodo controlador del boton iniciar sesion
+     * @param event
+     * @throws Exception
+     */
     public void irAIniciarSesion(ActionEvent event) throws Exception {
-            bancoApp.abrirIniciarSesion();
+            bancoApp.navegarVentanas("/IniciarSesionView.fxml","Banco-IniciarSesion",false);
     }
+
+    /**
+     * Metodo controlador del boton registrarse
+     * @param event
+     * @throws Exception
+     */
     public void irARegistrarse(ActionEvent event) throws Exception {
-        bancoApp.abrirRegistro();
+        bancoApp.navegarVentanas("/RegistroView.fxml","Banco-Registrarse",false);
     }
 }
 

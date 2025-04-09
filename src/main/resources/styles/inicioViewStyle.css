@@ -6,26 +6,26 @@
     -fx-font-weight: bold;
     -fx-font-size: 50px;
 }
-#btn_iniciarSesion{
+#btnIniciarSesion{
     -fx-background-color: #ff8906;
     -fx-text-fill: #fffffe;
     -fx-font-weight: bold;
     -fx-font-size: 15px;
     -fx-border-radius: 10px;
 }
-#btn_iniciarSesion:hover{
+#btnIniciarSesion:hover{
     -fx-background-color: #F16767;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
 }
-#btn_registrarse{
+#btnRegistrarse{
     -fx-background-color: #ff8906;
     -fx-text-fill: #fffffe;
     -fx-font-weight: bold;
     -fx-font-size: 15px;
     -fx-border-radius: 10px;
 }
-#btn_registrarse:hover{
+#btnRegistrarse:hover{
     -fx-background-color: #F16767;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;

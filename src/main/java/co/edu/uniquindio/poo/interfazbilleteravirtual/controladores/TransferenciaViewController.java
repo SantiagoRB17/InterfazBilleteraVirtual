@@ -13,18 +13,18 @@ import java.util.ResourceBundle;
 
 public class TransferenciaViewController implements Initializable {
     @FXML
-    private GridPane gridPane_formularioTransferencia;
+    private GridPane gridPaneFormularioTransferencia;
     @FXML
-    private Button btn_transferir;
+    private Button btnTransferir;
 
     @FXML
-    private ComboBox<?> cmb_categorias;
+    private ComboBox<?> cmbCategorias;
 
     @FXML
-    private TextField txt_montoATransferir;
+    private TextField txtMontoATransferir;
 
     @FXML
-    private TextField txt_numeroCuenta;
+    private TextField txtNumeroCuenta;
 
     @FXML
     void transferir(ActionEvent event) {

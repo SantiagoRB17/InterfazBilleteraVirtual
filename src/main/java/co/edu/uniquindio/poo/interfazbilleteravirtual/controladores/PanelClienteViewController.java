@@ -1,6 +1,10 @@
 package co.edu.uniquindio.poo.interfazbilleteravirtual.controladores;
 
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.entidades.Banco;
+import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.entidades.Transaccion;
+import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.entidades.Usuario;
+import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.enums.Categoria;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,6 +15,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 public class PanelClienteViewController implements Initializable{
@@ -18,40 +24,40 @@ public class PanelClienteViewController implements Initializable{
     private final Banco banco = Banco.getInstancia();
 
     @FXML
-    private TableColumn<?, ?> cl_categoria;
+    private TableColumn<Transaccion, String> clCategoria;
 
     @FXML
-    private TableColumn<?, ?> cl_fecha;
+    private TableColumn<Transaccion, LocalDateTime> clFecha;
 
     @FXML
-    private TableColumn<?, ?> cl_tipo;
+    private TableColumn<Transaccion, Categoria> clTipo;
 
     @FXML
-    private TableColumn<?, ?> cl_usuario;
+    private TableColumn<Categoria, Usuario> clUsuario;
 
     @FXML
-    private TableColumn<?, ?> cl_valor;
+    private TableColumn<Categoria, Double> clValor;
 
     @FXML
-    private Label lb_nroCuenta;
+    private Label lbNroCuenta;
 
     @FXML
-    private Label lb_saludo;
+    private Label lbSaludo;
 
     @FXML
-    private MenuButton menBtn_accionesPanel;
+    private MenuButton menBtnAccionesPanel;
 
     @FXML
-    private MenuItem menItem_cerrarSesion;
+    private MenuItem menItemCerrarSesion;
 
     @FXML
-    private MenuItem menItem_consultar;
+    private MenuItem menItemConsultar;
 
     @FXML
-    private MenuItem menItem_transferir;
+    private MenuItem menItemTransferir;
 
     @FXML
-    private TableView<?> tb_tablaTransferencias;
+    private TableView<Transaccion> tbTablaTransferencias;
 
     @FXML
     void cerrarSesion(ActionEvent event) {
@@ -70,6 +76,7 @@ public class PanelClienteViewController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+        clCategoria.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().get));
 
     }
 

@@ -12,7 +12,7 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" spacing="30.0" style="-fx-padding: 30px" stylesheets="@styles/IniciarSesionViewController.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfazbilleteravirtual.controladores.IniciarSesionViewController">
     <Label alignment="CENTER" maxWidth="Infinity" minWidth="-Infinity" text="Iniciar Sesión" />
-    <GridPane fx:id="gridPane_formularioIniciarSesion" alignment="CENTER" hgap="10" vgap="10">
+    <GridPane fx:id="gridPaneFormularioIniciarSesion" alignment="CENTER" hgap="10" vgap="10">
         <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
@@ -23,11 +23,11 @@
         </rowConstraints>
         <Label text="Número de identificación:" />
         <Label text="Contraseña:" GridPane.rowIndex="1" />
-        <TextField fx:id="txt_numeroIdentificacionInicioSesion" GridPane.columnIndex="1" />
-        <PasswordField fx:id="passField_contrasenaInicioSesion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="txtNumeroIdentificacionInicioSesion" GridPane.columnIndex="1" />
+        <PasswordField fx:id="passFieldContrasenaInicioSesion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
     </GridPane>
     <HBox spacing="20">
-        <Button fx:id="btn_volverAInicio" mnemonicParsing="false" onAction="#volverAInicio" text="Volver al Inicio" HBox.hgrow="ALWAYS" />
-        <Button fx:id="btn_iniciarSesion" maxWidth="Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar Sesión" HBox.hgrow="ALWAYS" />
+        <Button fx:id="btnVolverAInicio" mnemonicParsing="false" onAction="#volverAInicio" text="Volver al Inicio" HBox.hgrow="ALWAYS" />
+        <Button fx:id="btnIniciarSesion" maxWidth="Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#iniciarSesion" text="Iniciar Sesión" HBox.hgrow="ALWAYS" />
     </HBox>
 </VBox>

@@ -11,7 +11,7 @@
 
 <VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="30" style="-fx-padding: 40" stylesheets="@styles/transferenciaViewStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.interfazbilleteravirtual.controladores.TransferenciaViewController">
     <Label text="Realizar Transferencia" />
-    <GridPane fx:id="gridPane_formularioTransferencia" hgap="10" vgap="10">
+    <GridPane fx:id="gridPaneFormularioTransferencia" hgap="10" vgap="10">
         <columnConstraints>
             <ColumnConstraints hgrow="ALWAYS" />
             <ColumnConstraints hgrow="ALWAYS" />
@@ -24,9 +24,9 @@
         <Label text="Número de cuenta:" />
         <Label text="Monto a transferir" GridPane.rowIndex="1" />
         <Label text="Categoría:" GridPane.rowIndex="2" />
-        <TextField fx:id="txt_numeroCuenta" GridPane.columnIndex="1" />
-        <TextField fx:id="txt_montoATransferir" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <ComboBox fx:id="cmb_categorias" maxWidth="Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="txtNumeroCuenta" GridPane.columnIndex="1" />
+        <TextField fx:id="txtMontoATransferir" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <ComboBox fx:id="cmbCategorias" maxWidth="Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     </GridPane>
-    <Button fx:id="btn_transferir" mnemonicParsing="false" onAction="#transferir" text="Transferir" />
+    <Button fx:id="btnTransferir" mnemonicParsing="false" onAction="#transferir" text="Transferir" />
 </VBox>

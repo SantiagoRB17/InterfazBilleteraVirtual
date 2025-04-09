@@ -4,6 +4,7 @@ import co.edu.uniquindio.poo.interfazbilleteravirtual.config.Constantes;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.enums.Categoria;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.vo.PorcentajeGastosIngresos;
 import co.edu.uniquindio.poo.interfazbilleteravirtual.modelo.vo.SaldoTransaccionesBilletera;
+import co.edu.uniquindio.poo.interfazbilleteravirtual.validaciones.ValidacionCorreo;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -56,8 +57,8 @@ public class Banco {
             throw new Exception("La dirección es obligatoria");
         }
 
-        if(email == null || email.isEmpty()){
-            throw new Exception("El email es obligatorio");
+        if(email == null || email.isEmpty() || !ValidacionCorreo.validarExpresionRegular(email)){
+            throw new Exception("No es una direccion de correo valida");
         }
 
         if(password == null || password.isEmpty()){
@@ -68,7 +69,13 @@ public class Banco {
             throw new Exception("El usuario ya existe");
         }
 
-        Usuario usuario = new Usuario(id, nombre, direccion, email, password);
+        Usuario usuario = Usuario.builder()
+                .id(id)
+                .nombre(nombre)
+                .direccion(direccion)
+                .email(email)
+                .password(password)
+                .build();
         // Se agrega el usuario a la lista de usuarios
         usuarios.add(usuario);
         // Se registra la billetera del usuario

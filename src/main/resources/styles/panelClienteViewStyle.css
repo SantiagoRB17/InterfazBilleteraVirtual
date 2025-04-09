@@ -6,75 +6,75 @@
     -fx-font-weight: bold;
     -fx-font-size: 22px;
 }
-#lb_saludo{
+#lbSaludo{
     -fx-font-weight: normal;
     -fx-font-size: 14px;
 }
-#lb_nroCuenta{
+#lbNroCuenta{
     -fx-font-weight: normal;
     -fx-font-size: 14px;
 }
-#tb_tablaTransferencias{
+#tbTablaTransferencias{
     -fx-background-color: #0e172c;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
 }
-#cl_tipo {
+#clTipo {
     -fx-background-color: #FFB200;
 
 }
-#cl_tipo .label {
+#clTipo .label {
     -fx-font-size: 15px;
     -fx-text-fill: #0f0e17;
 }
-#cl_fecha{
+#clFecha{
     -fx-background-color: #EB5B00;
 }
-#cl_fecha .label{
+#clFecha .label{
     -fx-font-size: 15px;
     -fx-text-fill: #0f0e17;
 }
-#cl_valor{
+#clValor{
     -fx-background-color: #D91656;
 }
-#cl_valor .label{
+#clValor .label{
     -fx-font-size: 15px;
     -fx-text-fill: #0f0e17;
 }
-#cl_usuario{
+#clUsuario{
     -fx-background-color: #640D5F;
 }
-#cl_usuario .label{
+#clUsuario .label{
     -fx-font-size: 15px;
     -fx-text-fill: #0f0e17;
 }
-#cl_categoria{
+#clCategoria{
     -fx-background-color: #F16767;
 }
-#cl_categoria .label{
+#clCategoria .label{
     -fx-font-size: 15px;
     -fx-text-fill: #0f0e17;
 }
-#menBtn_accionesPanel{
+#menBtnAccionesPanel{
     -fx-background-color: #ff8906;
     -fx-text-fill: #fffffe;
     -fx-font-weight: bold;
     -fx-font-size: 10px;
     -fx-border-radius: 50px;
 }
-#menBtn_accionesPanel .label{
+#menBtnAccionesPanel .label{
     -fx-font-size: 15px;
     -fx-text-fill: #F1EFEC;
 }
-#menBtn_accionesPanel .menu-item{
+#menBtnAccionesPanel .menu-item{
     -fx-background-color: #ff8906;
     -fx-font-size: 10px;
 }
-#menBtn_accionesPanel .menu-item:hover{
+#menBtnAccionesPanel .menu-item:hover{
     -fx-background-color: #F16767;
     -fx-scale-x: 1.06;
     -fx-scale-y: 1.06;
 }
-#menBtn_accionesPanel .context-menu{
+#menBtnAccionesPanel .context-menu{
     -fx-background-color: #EB5B00;
 }
