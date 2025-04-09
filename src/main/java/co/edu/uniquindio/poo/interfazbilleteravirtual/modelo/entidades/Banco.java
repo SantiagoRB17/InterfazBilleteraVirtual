@@ -65,7 +65,7 @@ public class Banco {
             throw new Exception("La contraseña es obligatoria");
         }
 
-        if(buscarUsuario(id) != null){
+        if(buscarUsuario(id,password) != null){
             throw new Exception("El usuario ya existe");
         }
 
@@ -136,7 +136,7 @@ public class Banco {
      * @throws Exception si el usuario no existe o la contraseña es incorrecta
      */
     public SaldoTransaccionesBilletera consultarSaldoYTransacciones(String numeroIdentificacion, String password)throws Exception{
-        Usuario usuario = buscarUsuario(numeroIdentificacion);
+        Usuario usuario = buscarUsuario(numeroIdentificacion,password);
 
         if(usuario == null){
             throw new Exception("El usuario no existe");
@@ -167,13 +167,14 @@ public class Banco {
     }
 
     /**
-     * Permite buscar un usuario por su id
+     * Metodo que busca a un usuario segun su id y contraseña
      * @param id id del usuario
-     * @return usuario encontrado o null si no existe
+     * @param password contraseña del usuario
+     * @return usuario encontrado o null en caso contrario
      */
-    public Usuario buscarUsuario(String id){
+    public Usuario buscarUsuario(String id, String password){
         return usuarios.stream()
-                .filter(usuario -> usuario.getId().equals(id))
+                .filter(usuario -> usuario.getId().equals(id) && usuario.getPassword().equals(password))
                 .findFirst()
                 .orElse(null);
     }

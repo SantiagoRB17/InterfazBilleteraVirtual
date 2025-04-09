@@ -76,7 +76,7 @@ public class PanelClienteViewController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        clCategoria.setCellValueFactory(cellData -> new SimpleObjectProperty<>(cellData.getValue().get));
+
 
     }
 

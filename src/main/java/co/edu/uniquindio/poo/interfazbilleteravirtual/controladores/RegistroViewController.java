@@ -61,24 +61,12 @@ public class RegistroViewController{
                     txtCorreoElectronico.getText(),
                     passFieldContrasena.getText()
             );
-            crearAlerta("Registro existoso", Alert.AlertType.INFORMATION);
+            bancoApp.crearAlerta("Registro existoso", Alert.AlertType.INFORMATION);
             bancoApp.navegarVentanas("/InicioView.fxml","Banco",false);
         }catch(Exception e){
-            crearAlerta(e.getMessage(), Alert.AlertType.ERROR);
+            bancoApp.crearAlerta(e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
-    /**
-     * Metodo que pemite crear y mostrar alertas en pantalla
-     * @param mensaje mensaje que aparecera en la alerta
-     * @param tipo tipo de alerta
-     */
-    public void crearAlerta(String mensaje, Alert.AlertType tipo){
-        Alert alert = new Alert(tipo);
-        alert.setTitle("Alerta");
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
-    }
 }
 
