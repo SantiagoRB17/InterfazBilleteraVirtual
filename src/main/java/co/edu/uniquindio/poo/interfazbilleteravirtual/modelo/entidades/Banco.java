@@ -195,7 +195,7 @@ public class Banco {
 
         Transaccion transaccion = new Transaccion(
                 UUID.randomUUID().toString(),
-                monto,
+                monto,null,
                 LocalDateTime.now(),
                 Categoria.RECARGA,
                 billetera,
@@ -220,7 +220,7 @@ public class Banco {
 
         Transaccion transaccion = new Transaccion(
                 UUID.randomUUID().toString(),
-                monto,
+                monto,null,
                 LocalDateTime.now(),
                 categoria,
                 billeteraOrigen,
@@ -257,6 +257,15 @@ public class Banco {
         return billetera.obtenerPorcentajeGastosIngresos(mes, anio);
     }
 
+    /**
+     * Metodo que permite editar los datos del usuario
+     * @param id id del usuario a buscar
+     * @param nombre nuevo nombre del usuario
+     * @param direccion nueva direccion del usuario
+     * @param email nuevo email del usuario
+     * @param password nueva contraseña del usuario
+     * @throws Exception excepcion en caso de que no se rellene uno de los campos o no sea valido el email
+     */
     public void editarUsuario(String id,String nombre, String direccion,String  email, String password ) throws Exception {
         Usuario usuario = buscarUsuario(id,password);
 

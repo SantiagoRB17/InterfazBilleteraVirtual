@@ -32,7 +32,7 @@ public class Billetera {
         }
 
         transaccion.setComision(Constantes.COMISION);
-
+        transaccion.setTipoTransaccion("Retiro");
         saldo -= montoConComision;
         transacciones.add(transaccion);
     }
@@ -44,6 +44,7 @@ public class Billetera {
         }
 
         saldo += monto;
+        transaccion.setTipoTransaccion("Deposito");
         transacciones.add(transaccion);
     }
 

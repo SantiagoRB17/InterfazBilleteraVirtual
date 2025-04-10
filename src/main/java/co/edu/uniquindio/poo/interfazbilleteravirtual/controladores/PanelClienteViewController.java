@@ -77,16 +77,17 @@ public class PanelClienteViewController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+        clTipo.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getTipoTransaccion()));
         clFecha.setCellValueFactory(cellData->new SimpleStringProperty(cellData.getValue().getFecha().toString()));
         clValor.setCellValueFactory(cellData ->new SimpleStringProperty(String.valueOf(cellData.getValue().getMonto())));
         clUsuario.setCellValueFactory(cellData ->new SimpleStringProperty(cellData.getValue().getBilleteraOrigen().getUsuario().getNombre()));
         clCategoria.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTipo().toString()));
 
         transaccionesObservables = FXCollections.observableArrayList();
+        cargarTransferencias();
 
         lbSaludo.setText("Bienvenido " + usuario.getNombre() + " en este espacio puede ver sus transacciones.");
         lbNroCuenta.setText("Su numero de cuenta es " + cuenta.getNumero().toString());
-
     }
 
     /**
@@ -117,7 +118,7 @@ public class PanelClienteViewController implements Initializable{
     }
 
     /**
-     * Metodo para abrir la ventana para transferencias
+     * Metodo que permite abrir una ventana para hacer transferencias
      */
     public void abrirTransferencia() {
         try {
@@ -135,6 +136,8 @@ public class PanelClienteViewController implements Initializable{
             stage.setResizable(false);
             stage.setTitle("Banco-Transferencia");
 
+            stage.setOnHidden(e -> cargarTransferencias());
+
             // Mostrar la nueva ventana
             stage.show();
 
@@ -144,7 +147,15 @@ public class PanelClienteViewController implements Initializable{
     }
 
     /**
-     *
+     * Metodo que carga las transacciones de la cuenta a la tabla de transacciones
+     */
+    public void cargarTransferencias(){
+        transaccionesObservables.setAll(cuenta.obtenerTransacciones());
+        tbTablaTransferencias.setItems(transaccionesObservables);
+    }
+
+    /**
+     *Metodo controlador para el boton de editar perfil
      * @param actionEvent
      * @throws Exception
      */

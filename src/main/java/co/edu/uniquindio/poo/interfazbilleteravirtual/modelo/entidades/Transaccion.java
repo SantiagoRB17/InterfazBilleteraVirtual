@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 public class Transaccion {
     private String id;
     private float monto;
+    private String tipoTransaccion;
     private LocalDateTime fecha;
     private Categoria tipo;
     private Billetera billeteraOrigen, billeteraDestino;

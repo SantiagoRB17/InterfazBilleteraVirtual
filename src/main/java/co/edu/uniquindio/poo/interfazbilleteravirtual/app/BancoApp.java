@@ -30,6 +30,13 @@ public class BancoApp extends Application {
         navegarVentanas("/InicioView.fxml","Banco",false);
     }
 
+    /**
+     * Metodo que permite navegar entre ventanas
+     * @param nombreArchivoFxml nombre del archivo de la ventana
+     * @param tituloVentana titulo de la ventana
+     * @param resize parametro para establecer si la ventana se puede o no agrandar
+     * @throws Exception
+     */
     public void navegarVentanas(String nombreArchivoFxml, String tituloVentana, Boolean resize) throws Exception {
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource(nombreArchivoFxml));
