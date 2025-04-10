@@ -21,6 +21,7 @@
 }
 #clTipo {
     -fx-background-color: #FFB200;
+    -fx-font-weight: bold;
 
 }
 #clTipo .label {
@@ -29,6 +30,7 @@
 }
 #clFecha{
     -fx-background-color: #EB5B00;
+    -fx-font-weight: bold;
 }
 #clFecha .label{
     -fx-font-size: 15px;
@@ -36,6 +38,7 @@
 }
 #clValor{
     -fx-background-color: #D91656;
+    -fx-font-weight: bold;
 }
 #clValor .label{
     -fx-font-size: 15px;
@@ -43,6 +46,7 @@
 }
 #clUsuario{
     -fx-background-color: #640D5F;
+    -fx-font-weight: bold;
 }
 #clUsuario .label{
     -fx-font-size: 15px;
@@ -50,6 +54,7 @@
 }
 #clCategoria{
     -fx-background-color: #F16767;
+    -fx-font-weight: bold;
 }
 #clCategoria .label{
     -fx-font-size: 15px;

@@ -1,0 +1,23 @@
+.root{
+    -fx-background-color: #123458;
+}
+.label{
+    -fx-text-fill: #F1EFEC;
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+}
+#gridPaneFormularioRegistro .label{
+    -fx-font-size: 20px;
+}
+#btnEditar:hover{
+    -fx-background-color: #F16767;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#btnEditar{
+    -fx-background-color: #ff8906;
+    -fx-text-fill: #fffffe;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-radius: 10px;
+}
