@@ -64,6 +64,9 @@ public class PanelClienteViewController implements Initializable{
     private MenuItem menItemTransferir;
 
     @FXML
+    private MenuItem menItemRecargar;
+
+    @FXML
     private TableView<Transaccion> tbTablaTransferencias;
 
     private final BancoApp bancoApp = BancoApp.getInstancia();
@@ -147,6 +150,15 @@ public class PanelClienteViewController implements Initializable{
      */
     public void editarPerfil(ActionEvent actionEvent) throws Exception {
             bancoApp.navegarVentanas("/EditarPerfil.fxml","Banco-EditarPerfil",false);
+    }
+
+    /**
+     * Metodo controlador para el boton de recargar cuenta
+     * @param actionEvent
+     * @throws Exception
+     */
+    public  void recargarCuenta(ActionEvent actionEvent) throws Exception {
+        bancoApp.navegarVentanas("/recargaView.fxml","Banco-Recarga-Cuenta",false);
     }
 }
 
