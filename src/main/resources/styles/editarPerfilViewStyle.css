@@ -1,23 +1,55 @@
-.root{
-    -fx-background-color: #123458;
+// 1. Interfaz común para el Servicio y el Proxy
+interface ServiceInterface {
+    void operation();
 }
-.label{
-    -fx-text-fill: #F1EFEC;
-    -fx-font-weight: bold;
-    -fx-font-size: 25px;
+
+// 2. Servicio Real (la implementación concreta)
+class Service implements ServiceInterface {
+    @Override
+    public void operation() {
+        System.out.println("Operación ejecutada por el Servicio Real");
+    }
 }
-#gridPaneFormularioRegistro .label{
-    -fx-font-size: 20px;
+
+// 3. Proxy que controla el acceso al Servicio Real
+class Proxy implements ServiceInterface {
+    private Service realService;
+    
+    public Proxy(Service service) {
+        this.realService = service;
+    }
+    
+    private boolean checkAccess() {
+        // Lógica para verificar si el acceso está permitido
+        System.out.println("Proxy: Verificando acceso antes de ejecutar la operación...");
+        return true; // En una implementación real, esto podría ser más complejo
+    }
+    
+    @Override
+    public void operation() {
+        if (checkAccess()) {
+            System.out.println("Proxy: Acceso concedido, delegando al Servicio Real...");
+            realService.operation();
+        } else {
+            System.out.println("Proxy: Acceso denegado");
+        }
+    }
 }
-#btnEditar:hover{
-    -fx-background-color: #F16767;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
+
+// 4. Cliente que usa el Proxy
+public class Client {
+    public static void main(String[] args) {
+        // El cliente trabaja con la interfaz ServiceInterface
+        ServiceInterface service = new Proxy(new Service());
+        
+        System.out.println("Cliente: Ejecutando operación a través del Proxy...");
+        service.operation();
+    }
 }
-#btnEditar{
-    -fx-background-color: #ff8906;
-    -fx-text-fill: #fffffe;
-    -fx-font-weight: bold;
-    -fx-font-size: 15px;
-    -fx-border-radius: 10px;
-}
+
+
+
+Cliente: Ejecutando operación a través del Proxy...
+Proxy: Verificando acceso antes de ejecutar la operación...
+Proxy: Acceso concedido, delegando al Servicio Real...
+Operación ejecutada por el Servicio Real
